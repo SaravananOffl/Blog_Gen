@@ -1,0 +1,35 @@
+<%include partials/header%>
+
+<div class="container" >
+
+    <div class="jumbotron">
+    <h1 class="display-4 text-center">Create Blog</h1>
+
+    <form action="/blogs" method="post">
+       <div class ="form-group" >
+           <label for="title">Title: </label>
+           <input type="text" class="form-control" required = 'true' id = "title" name="title" placeholder="title">
+
+       </div>
+
+        <div class ="form-group required">
+            <label for="imageurl">Image Address</label>
+            <input type="text" class="form-control" required = 'true' id = "imageurl" name="imageurl" placeholder="Image">
+
+        </div>
+
+        <div class="form-group required">
+            <label for="body">Your Content: </label>
+            <textarea class="form-control" required = 'true' name="body" id="body" placeholder="blog content!" rows="3"></textarea>
+        </div>
+        <div class="text-center">
+
+        <button type="submit" class="btn btn-primary">CREATE</button>
+        </div>
+    </div>
+    </form>
+
+
+</div>
+
+<% include partials/footer %>

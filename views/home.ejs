@@ -1,0 +1,20 @@
+<% include partials/header %>
+
+
+<% blogs.forEach(function (blog) { %>
+
+<div class="container" style="margin-bottom:15px ">
+<div class="card" >
+    <img class="card-img-top" style="max-height: 50%; max-height: 50% ; object-fit: cover" src="<%= blog.image%>" alt="Card image">
+    <div class="card-body">
+        <h4 class="card-title"><%= blog.title %></h4>
+
+        <p class="card-text limited-text"><%= blog.body %></p>
+        <a href="/blogs/<%= blog._id %>" class="btn btn-primary">More</a>
+    </div>
+</div>
+</div>
+
+
+<% }) %>
+<% include partials/footer %>
